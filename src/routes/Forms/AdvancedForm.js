@@ -113,7 +113,7 @@ class AdvancedForm extends PureComponent {
     };
     return (
       <PageHeaderLayout
-        title="高级表单"
+        title="lc-react-seed"
         content="高级表单常见于一次性输入和提交大批量数据的场景。"
         wrapperClassName={styles.advancedForm}
       >
