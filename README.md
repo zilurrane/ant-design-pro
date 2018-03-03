@@ -8,7 +8,7 @@ An out-of-box UI solution for enterprise applications as a React boilerplate.
 
 ![](https://gw.alipayobjects.com/zos/rmsportal/xEdBqwSzvoSapmnSnYjU.png)
 
-- Preview: http://preview.pro.ant.design
+- Preview: https://lc-react-seed.herokuapp.com
 - Home Page: http://pro.ant.design
 - Documentation: http://pro.ant.design/docs/getting-started
 - ChangeLog: http://pro.ant.design/docs/changelog
