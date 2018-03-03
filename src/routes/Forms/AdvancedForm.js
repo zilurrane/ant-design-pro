@@ -174,7 +174,7 @@ class AdvancedForm extends PureComponent {
                   {getFieldDecorator('dateRange', {
                     rules: [{ required: true, message: '请选择生效日期' }],
                   })(
-                    <RangePicker placeholder={['开始日期', '结束日期']} style={{ width: '100%' }} />
+                    <RangePicker placeholder={['Start date', 'End date']} style={{ width: '100%' }} />
                   )}
                 </Form.Item>
               </Col>

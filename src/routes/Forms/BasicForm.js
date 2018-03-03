@@ -79,7 +79,7 @@ export default class BasicForms extends PureComponent {
                   required: true, message: '请选择起止日期',
                 }],
               })(
-                <RangePicker style={{ width: '100%' }} placeholder={['开始日期', '结束日期']} />
+                <RangePicker style={{ width: '100%' }} placeholder={['Start date', 'End date']} />
               )}
             </FormItem>
             <FormItem

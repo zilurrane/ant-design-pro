@@ -3,9 +3,9 @@ export const getNotices = (req, res) => {
     {
       id: '000000001',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
-      title: '你收到了 14 份新周报',
+      title: 'You received 14 new weekly reports',
       datetime: '2017-08-09',
-      type: '通知',
+      type: 'Notice',
     },
     {
       id: '000000002',
