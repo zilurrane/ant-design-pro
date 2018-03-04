@@ -14,38 +14,38 @@ class Step3 extends React.PureComponent {
     const information = (
       <div className={styles.information}>
         <Row>
-          <Col span={8} className={styles.label}>付款账户：</Col>
+          <Col span={8} className={styles.label}>Payment account:</Col>
           <Col span={16}>{data.payAccount}</Col>
         </Row>
         <Row>
-          <Col span={8} className={styles.label}>收款账户：</Col>
+          <Col span={8} className={styles.label}>Accounts receivable:</Col>
           <Col span={16}>{data.receiverAccount}</Col>
         </Row>
         <Row>
-          <Col span={8} className={styles.label}>收款人姓名：</Col>
+          <Col span={8} className={styles.label}>Payee Name:</Col>
           <Col span={16}>{data.receiverName}</Col>
         </Row>
         <Row>
-          <Col span={8} className={styles.label}>转账金额：</Col>
-          <Col span={16}><span className={styles.money}>{data.amount}</span> 元</Col>
+          <Col span={8} className={styles.label}>Transfer amount:</Col>
+          <Col span={16}><span className={styles.money}>{data.amount}</span> $</Col>
         </Row>
       </div>
     );
     const actions = (
       <Fragment>
         <Button type="primary" onClick={onFinish}>
-          再转一笔
+          Return
         </Button>
         <Button>
-          查看账单
+          Check the bill
         </Button>
       </Fragment>
     );
     return (
       <Result
         type="success"
-        title="操作成功"
-        description="预计两小时内到账"
+        title="Successful operation"
+        description="Expected to arrive within two hours"
         extra={information}
         actions={actions}
         className={styles.result}

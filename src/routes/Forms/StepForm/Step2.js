@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'dva';
 import { Form, Input, Button, Alert, Divider } from 'antd';
 import { routerRedux } from 'dva/router';
-import { digitUppercase } from '../../../utils/utils';
 import styles from './style.less';
 
 const formItemLayout = {
@@ -41,48 +40,47 @@ class Step2 extends React.PureComponent {
         <Alert
           closable
           showIcon
-          message="确认转账后，资金将直接打入对方账户，无法退回。"
+          message="Confirm the transfer, the funds once transfered to another account can not be returned."
           style={{ marginBottom: 24 }}
         />
         <Form.Item
           {...formItemLayout}
           className={styles.stepFormText}
-          label="付款账户"
+          label="Payment"
         >
           {data.payAccount}
         </Form.Item>
         <Form.Item
           {...formItemLayout}
           className={styles.stepFormText}
-          label="收款账户"
+          label="Account"
         >
           {data.receiverAccount}
         </Form.Item>
         <Form.Item
           {...formItemLayout}
           className={styles.stepFormText}
-          label="收款人姓名"
+          label="Payee Name"
         >
           {data.receiverName}
         </Form.Item>
         <Form.Item
           {...formItemLayout}
           className={styles.stepFormText}
-          label="转账金额"
+          label="Amount"
         >
-          <span className={styles.money}>{data.amount}</span>
-          <span className={styles.uppercase}>（{digitUppercase(data.amount)}）</span>
+          ${data.amount}
         </Form.Item>
         <Divider style={{ margin: '24px 0' }} />
         <Form.Item
           {...formItemLayout}
-          label="支付密码"
+          label="Password"
           required={false}
         >
           {getFieldDecorator('password', {
             initialValue: '123456',
             rules: [{
-              required: true, message: '需要支付密码才能进行支付',
+              required: true, message: 'You need to enter password to pay',
             }],
           })(
             <Input type="password" autoComplete="off" style={{ width: '80%' }} />
@@ -97,10 +95,10 @@ class Step2 extends React.PureComponent {
           label=""
         >
           <Button type="primary" onClick={onValidateForm} loading={submitting}>
-            提交
+            Submit
           </Button>
           <Button onClick={onPrev} style={{ marginLeft: 8 }}>
-            上一步
+            Previous
           </Button>
         </Form.Item>
       </Form>
