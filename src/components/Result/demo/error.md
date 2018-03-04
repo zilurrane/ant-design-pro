@@ -3,7 +3,7 @@ order: 2
 title: Failed
 ---
 
-提交失败。
+Submission Failed。
 
 ````jsx
 import Result from 'ant-design-pro/lib/Result';
@@ -12,26 +12,26 @@ import { Button, Icon } from 'antd';
 const extra = (
   <div>
     <div style={{ fontSize: 16, color: 'rgba(0, 0, 0, 0.85)', fontWeight: 500, marginBottom: 16 }}>
-      您提交的内容有如下错误：
+      The content you submitted has the following error:
     </div>
     <div style={{ marginBottom: 16 }}>
-      <Icon style={{ color: '#f5222d', marginRight: 8 }} type="close-circle-o" />您的账户已被冻结
-      <a style={{ marginLeft: 16 }}>立即解冻 <Icon type="right" /></a>
+      <Icon style={{ color: '#f5222d', marginRight: 8 }} type="close-circle-o" />Your account has been frozen
+      <a style={{ marginLeft: 16 }}>Recover immediately <Icon type="right" /></a>
     </div>
     <div>
-      <Icon style={{ color: '#f5222d', marginRight: 8 }} type="close-circle-o" />您的账户还不具备申请资格
-      <a style={{ marginLeft: 16 }}>立即升级 <Icon type="right" /></a>
+      <Icon style={{ color: '#f5222d', marginRight: 8 }} type="close-circle-o" />Your account is not eligible yet
+      <a style={{ marginLeft: 16 }}>Upgrade immediately <Icon type="right" /></a>
     </div>
   </div>
 );
 
-const actions = <Button type="primary">返回修改</Button>;
+const actions = <Button type="primary">Return to edit</Button>;
 
 ReactDOM.render(
   <Result
     type="error"
-    title="提交失败"
-    description="请核对并修改以下信息后，再重新提交。"
+    title="Submission Failed"
+    description="Please check and modify the following information before resubmitting."
     extra={extra}
     actions={actions}
   />
