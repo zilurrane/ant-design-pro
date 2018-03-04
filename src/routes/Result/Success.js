@@ -4,59 +4,60 @@ import Result from '../../components/Result';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 
 const { Step } = Steps;
-
 const desc1 = (
-  <div style={{ fontSize: 12, color: 'rgba(0, 0, 0, 0.45)', position: 'relative', left: 42 }}>
-    <div style={{ margin: '8px 0 4px' }}>
-      曲丽丽<Icon style={{ marginLeft: 8 }} type="dingding-o" />
+  <div style={{ fontSize: 14, position: 'relative', left: 38 }}>
+    <div style={{ marginTop: 8, marginBottom: 4 }}>
+      Qu Lili
+      <Icon type="dingding-o" style={{ marginLeft: 8 }} />
     </div>
-    <div>2016-12-12 12:32</div>
+    <div style={{ marginTop: 8, marginBottom: 4 }}>2016-12-12 12:32</div>
   </div>
 );
 
 const desc2 = (
-  <div style={{ fontSize: 12, position: 'relative', left: 42 }}>
-    <div style={{ margin: '8px 0 4px' }}>
-      周毛毛<Icon type="dingding-o" style={{ color: '#00A0E9', marginLeft: 8 }} />
+  <div style={{ fontSize: 14, position: 'relative', left: 38 }}>
+    <div style={{ marginTop: 8, marginBottom: 4 }}>
+       Mungi li
+      <Icon type="dingding-o" style={{ color: '#00A0E9', marginLeft: 8 }} />
     </div>
-    <div><a href="">催一下</a></div>
+    <div style={{ marginTop: 8, marginBottom: 4 }}><a href="">Urging</a></div>
   </div>
 );
 
 const extra = (
   <Fragment>
-    <div style={{ fontSize: 16, color: 'rgba(0, 0, 0, 0.85)', fontWeight: '500', marginBottom: 20 }}>
-      项目名称
+    <div style={{ fontSize: 16, color: 'rgba(0, 0, 0, 0.85)', fontWeight: 500, marginBottom: 20 }}>
+      Project Name
     </div>
     <Row style={{ marginBottom: 16 }}>
       <Col xs={24} sm={12} md={12} lg={12} xl={6}>
-        <span style={{ color: 'rgba(0, 0, 0, 0.85)' }}>项目 ID：</span>
+        <span style={{ color: 'rgba(0, 0, 0, 0.85)' }}>Project ID：</span>
         23421
       </Col>
       <Col xs={24} sm={12} md={12} lg={12} xl={6}>
-        <span style={{ color: 'rgba(0, 0, 0, 0.85)' }}>负责人：</span>
-        曲丽丽
+        <span style={{ color: 'rgba(0, 0, 0, 0.85)' }}>Principal: </span>
+        Ziluli
       </Col>
       <Col xs={24} sm={24} md={24} lg={24} xl={12}>
-        <span style={{ color: 'rgba(0, 0, 0, 0.85)' }}>生效时间：</span>
+        <span style={{ color: 'rgba(0, 0, 0, 0.85)' }}>Effective time: </span>
         2016-12-12 ~ 2017-12-12
       </Col>
     </Row>
-    <Steps style={{ marginLeft: -42, width: 'calc(100% + 84px)' }} progressDot current={1}>
-      <Step title={<span style={{ fontSize: 14 }}>创建项目</span>} description={desc1} />
-      <Step title={<span style={{ fontSize: 14 }}>部门初审</span>} description={desc2} />
-      <Step title={<span style={{ fontSize: 14 }}>财务复核</span>} />
-      <Step title={<span style={{ fontSize: 14 }}>完成</span>} />
+    <Steps progressDot current={1}>
+      <Step title="Create Project" description={desc1} />
+      <Step title="Department first instance" description={desc2} />
+      <Step title="Financial Review" />
+      <Step title="Finished" />
     </Steps>
   </Fragment>
 );
 
 const actions = (
-  <Fragment>
-    <Button type="primary">返回列表</Button>
-    <Button>查看项目</Button>
-    <Button>打 印</Button>
-  </Fragment>
+  <div>
+    <Button type="primary"> Return list </Button>
+    <Button> View Item </Button>
+    <Button> Print </Button>
+  </div>
 );
 
 export default () => (

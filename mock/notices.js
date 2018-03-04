@@ -39,7 +39,7 @@ export const getNotices = (req, res) => {
     {
       id: '000000006',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
-      title: '曲丽丽 评论了你',
+      title: 'Qu Lili 评论了你',
       description: '描述信息描述信息描述信息',
       datetime: '2017-08-07',
       type: '消息',
