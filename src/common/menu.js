@@ -25,51 +25,56 @@ const menuData = [{
   }, {
     name: 'Step-form',
     path: 'step-form',
-  }, {
-    name: 'Advanced-form',
-    authority: 'admin',
-    path: 'advanced-form',
-  }],
-}, {
-  name: 'List',
-  icon: 'table',
-  path: 'list',
-  children: [{
-    name: 'Table-list',
-    path: 'table-list',
-  }, {
-    name: 'Basic-list',
-    path: 'basic-list',
-  }, {
-    name: 'Card-list',
-    path: 'card-list',
-  }, {
-    name: 'Search',
-    path: 'search',
-    children: [{
-      name: 'Articles',
-      path: 'articles',
-    }, {
-      name: 'Projects',
-      path: 'projects',
-    }, {
-      name: 'Applications',
-      path: 'applications',
-    }],
-  }],
-}, {
-  name: 'Profile',
-  icon: 'profile',
-  path: 'profile',
-  children: [{
-    name: 'Basic',
-    path: 'basic',
-  }, {
-    name: 'Advanced',
-    path: 'advanced',
-    authority: 'admin',
-  }],
-}, {
+  },
+  //  {
+  //   name: 'Advanced-form',
+  //   authority: 'admin',
+  //   path: 'advanced-form',
+  // }
+  ],
+},
+//  {
+//   name: 'List',
+//   icon: 'table',
+//   path: 'list',
+//   children: [{
+//     name: 'Table-list',
+//     path: 'table-list',
+//   }, {
+//     name: 'Basic-list',
+//     path: 'basic-list',
+//   }, {
+//     name: 'Card-list',
+//     path: 'card-list',
+//   }, {
+//     name: 'Search',
+//     path: 'search',
+//     children: [{
+//       name: 'Articles',
+//       path: 'articles',
+//     }, {
+//       name: 'Projects',
+//       path: 'projects',
+//     }, {
+//       name: 'Applications',
+//       path: 'applications',
+//     }],
+//   }],
+// },
+  // {
+//   name: 'Profile',
+//   icon: 'profile',
+//   path: 'profile',
+//   children: [{
+//     name: 'Basic',
+//     path: 'basic',
+//   }, {
+//     name: 'Advanced',
+//     path: 'advanced',
+//     authority: 'admin',
+//   }],
+// },
+{
   name: 'Result',
   icon: 'check-circle-o',
   path: 'result',
