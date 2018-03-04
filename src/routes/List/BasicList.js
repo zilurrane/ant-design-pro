@@ -77,10 +77,10 @@ export default class BasicList extends PureComponent {
     const menu = (
       <Menu>
         <Menu.Item>
-          <a>编辑</a>
+          <a>Edit</a>
         </Menu.Item>
         <Menu.Item>
-          <a>删除</a>
+          <a>Delete</a>
         </Menu.Item>
       </Menu>
     );
@@ -129,7 +129,7 @@ export default class BasicList extends PureComponent {
               dataSource={list}
               renderItem={item => (
                 <List.Item
-                  actions={[<a>编辑</a>, <MoreBtn />]}
+                  actions={[<a>Edit</a>, <MoreBtn />]}
                 >
                   <List.Item.Meta
                     avatar={<Avatar src={item.logo} shape="square" size="large" />}

@@ -62,7 +62,7 @@ const columns = [
     render: val => <span>{moment(val).format('YYYY-MM-DD HH:mm:ss')}</span>,
   },
   {
-    title: '操作',
+    title: 'Action',
     render: () => (
       <Fragment>
         <a href="">配置</a>
@@ -361,8 +361,8 @@ export default class TableList extends PureComponent {
 
     const menu = (
       <Menu onClick={this.handleMenuClick} selectedKeys={[]}>
-        <Menu.Item key="remove">删除</Menu.Item>
-        <Menu.Item key="approval">批量审批</Menu.Item>
+        <Menu.Item key="remove">Delete</Menu.Item>
+        <Menu.Item key="approval">Approve</Menu.Item>
       </Menu>
     );
 

@@ -33,8 +33,8 @@ const menu = (
 const action = (
   <div>
     <ButtonGroup>
-      <Button>操作</Button>
-      <Button>操作</Button>
+      <Button>Action</Button>
+      <Button>Action</Button>
       <Dropdown overlay={menu} placement="bottomRight">
         <Button><Icon type="ellipsis" /></Button>
       </Dropdown>

@@ -175,7 +175,7 @@ export default class FilterCardList extends PureComponent {
                 bodyStyle={{ paddingBottom: 20 }}
                 actions={[
                   <Tooltip title="下载"><Icon type="download" /></Tooltip>,
-                  <Tooltip title="编辑"><Icon type="edit" /></Tooltip>,
+                  <Tooltip title="Edit"><Icon type="edit" /></Tooltip>,
                   <Tooltip title="分享"><Icon type="share-alt" /></Tooltip>,
                   <Dropdown overlay={itemMenu}><Icon type="ellipsis" /></Dropdown>,
                 ]}

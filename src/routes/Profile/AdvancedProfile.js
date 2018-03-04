@@ -25,8 +25,8 @@ const menu = (
 const action = (
   <Fragment>
     <ButtonGroup>
-      <Button>操作</Button>
-      <Button>操作</Button>
+      <Button>Action</Button>
+      <Button>Action</Button>
       <Dropdown overlay={menu} placement="bottomRight">
         <Button><Icon type="ellipsis" /></Button>
       </Dropdown>
@@ -256,7 +256,7 @@ export default class AdvancedProfile extends Component {
             <DescriptionList size="small" style={{ marginBottom: 16 }} title="组名称">
               <Description term="负责人">林东东</Description>
               <Description term="角色码">1234567</Description>
-              <Description term="所属部门">XX公司 - YY部</Description>
+              <Description term="Department">XX公司 - YY部</Description>
               <Description term="过期时间">2017-08-08</Description>
               <Description term="描述">这段描述很长很长很长很长很长很长很长很长很长很长很长很长很长很长...</Description>
             </DescriptionList>
