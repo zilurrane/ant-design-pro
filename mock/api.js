@@ -1,4 +1,6 @@
-import { parse } from 'url';
+import {
+  parse,
+} from 'url';
 
 const titles = [
   'Alipay',
@@ -84,19 +86,18 @@ export function fakeList(count) {
       like: Math.ceil(Math.random() * 100) + 100,
       message: Math.ceil(Math.random() * 10) + 10,
       content: 'Paragraphs indicate: ant gold service design platform ant.design, with minimal effort, seamless access to ant gold service ecosystem, providing experience across the design and development solutions. Ants gold service design platform ant.design, with minimal effort, seamless access to ant gold service ecology, providing design solutions across the experience and development solutions.',
-      members: [
-        {
-          avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ZiESqWwCXBRQoaPONSJe.png',
-          name: 'Qu Lili',
-        },
-        {
-          avatar: 'https://gw.alipayobjects.com/zos/rmsportal/tBOxZPlITHqwlGjsJWaF.png',
-          name: 'Wang Zhaojun',
-        },
-        {
-          avatar: 'https://gw.alipayobjects.com/zos/rmsportal/sBxjgqiuHMGRkIjqlQCd.png',
-          name: 'Dong Nana',
-        },
+      members: [{
+        avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ZiESqWwCXBRQoaPONSJe.png',
+        name: 'Qu Lili',
+      },
+      {
+        avatar: 'https://gw.alipayobjects.com/zos/rmsportal/tBOxZPlITHqwlGjsJWaF.png',
+        name: 'Wang Zhaojun',
+      },
+      {
+        avatar: 'https://gw.alipayobjects.com/zos/rmsportal/sBxjgqiuHMGRkIjqlQCd.png',
+        name: 'Dong Nana',
+      },
       ],
     });
   }
@@ -123,170 +124,167 @@ export function getFakeList(req, res, u) {
   }
 }
 
-export const getNotice = [
-  {
-    id: 'xxx1',
-    title: titles[0],
-    logo: avatars[0],
-    description: 'It is an inner thing that they can not reach or touch',
-    updatedAt: new Date(),
-    member: 'Science move bricks group',
-    href: '',
-    memberLink: '',
-  },
-  {
-    id: 'xxx2',
-    title: titles[1],
-    logo: avatars[1],
-    description: 'Hope is a good thing, perhaps the best, good things will not die out',
-    updatedAt: new Date('2017-07-24'),
-    member: 'The whole group is Daniel Wu',
-    href: '',
-    memberLink: '',
-  },
-  {
-    id: 'xxx3',
-    title: titles[2],
-    logo: avatars[2],
-    description: '城镇中有那么多的酒馆，她却偏偏走进了我的酒馆',
-    updatedAt: new Date(),
-    member: '中二少女团',
-    href: '',
-    memberLink: '',
-  },
-  {
-    id: 'xxx4',
-    title: titles[3],
-    logo: avatars[3],
-    description: '那时候我只会想自己想要什么，从不想自己拥有什么',
-    updatedAt: new Date('2017-07-23'),
-    member: '程序员日常',
-    href: '',
-    memberLink: '',
-  },
-  {
-    id: 'xxx5',
-    title: titles[4],
-    logo: avatars[4],
-    description: '凛冬将至',
-    updatedAt: new Date('2017-07-23'),
-    member: '高逼格设计天团',
-    href: '',
-    memberLink: '',
-  },
-  {
-    id: 'xxx6',
-    title: titles[5],
-    logo: avatars[5],
-    description: '生命就像一盒巧克力，结果往往出人意料',
-    updatedAt: new Date('2017-07-23'),
-    member: '骗你来学计算机',
-    href: '',
-    memberLink: '',
-  },
+export const getNotice = [{
+  id: 'xxx1',
+  title: titles[0],
+  logo: avatars[0],
+  description: 'It is an inner thing that they can not reach or touch',
+  updatedAt: new Date(),
+  member: 'Science move bricks group',
+  href: '',
+  memberLink: '',
+},
+{
+  id: 'xxx2',
+  title: titles[1],
+  logo: avatars[1],
+  description: 'Hope is a good thing, perhaps the best, good things will not die out',
+  updatedAt: new Date('2017-07-24'),
+  member: 'The whole group is Daniel Wu',
+  href: '',
+  memberLink: '',
+},
+{
+  id: 'xxx3',
+  title: titles[2],
+  logo: avatars[2],
+  description: 'There are so many pubs in town, but she just walked into my pub.',
+  updatedAt: new Date(),
+  member: 'second girls',
+  href: '',
+  memberLink: '',
+},
+{
+  id: 'xxx4',
+  title: titles[3],
+  logo: avatars[3],
+  description: 'I just wanted to know what I wanted and I never wanted to have what I had',
+  updatedAt: new Date('2017-07-23'),
+  member: 'programmer daily',
+  href: '',
+  memberLink: '',
+},
+{
+  id: 'xxx5',
+  title: titles[4],
+  logo: avatars[4],
+  description: 'Winter is coming',
+  updatedAt: new Date('2017-07-23'),
+  member: 'high-force grid design day group',
+  href: '',
+  memberLink: '',
+},
+{
+  id: 'xxx6',
+  title: titles[5],
+  logo: avatars[5],
+  description: 'life is like a box of chocolates, the result is often unexpected',
+  updatedAt: new Date('2017-07-23'),
+  member: 'cheat you to learn computer',
+  href: '',
+  memberLink: '',
+},
 ];
 
-export const getActivities = [
-  {
-    id: 'trend-1',
-    updatedAt: new Date(),
-    user: {
-      name: '曲丽丽',
-      avatar: avatars2[0],
-    },
-    group: {
-      name: '高逼格设计天团',
-      link: 'http://github.com/',
-    },
-    project: {
-      name: '六月迭代',
-      link: 'http://github.com/',
-    },
-    template: '在 @{group} 新建项目 @{project}',
+export const getActivities = [{
+  id: 'trend-1',
+  updatedAt: new Date(),
+  user: {
+    name: 'Qu Lili',
+    avatar: avatars2[0],
   },
-  {
-    id: 'trend-2',
-    updatedAt: new Date(),
-    user: {
-      name: '付小小',
-      avatar: avatars2[1],
-    },
-    group: {
-      name: '高逼格设计天团',
-      link: 'http://github.com/',
-    },
-    project: {
-      name: '六月迭代',
-      link: 'http://github.com/',
-    },
-    template: '在 @{group} 新建项目 @{project}',
+  group: {
+    name: 'High force grid design day group',
+    link: 'http://github.com/',
   },
-  {
-    id: 'trend-3',
-    updatedAt: new Date(),
-    user: {
-      name: '林东东',
-      avatar: avatars2[2],
-    },
-    group: {
-      name: '中二少女团',
-      link: 'http://github.com/',
-    },
-    project: {
-      name: '六月迭代',
-      link: 'http://github.com/',
-    },
-    template: '在 @{group} 新建项目 @{project}',
+  project: {
+    name: 'June iteration',
+    link: 'http://github.com/',
   },
-  {
-    id: 'trend-4',
-    updatedAt: new Date(),
-    user: {
-      name: '周星星',
-      avatar: avatars2[4],
-    },
-    project: {
-      name: '5 月日常迭代',
-      link: 'http://github.com/',
-    },
-    template: '将 @{project} 更新至已发布状态',
+  template: 'New project @{group} @{project}',
+},
+{
+  id: 'trend-2',
+  updatedAt: new Date(),
+  user: {
+    name: 'Pay small',
+    avatar: avatars2[1],
   },
-  {
-    id: 'trend-5',
-    updatedAt: new Date(),
-    user: {
-      name: '朱偏右',
-      avatar: avatars2[3],
-    },
-    project: {
-      name: '工程效能',
-      link: 'http://github.com/',
-    },
-    comment: {
-      name: '留言',
-      link: 'http://github.com/',
-    },
-    template: '在 @{project} 发布了 @{comment}',
+  group: {
+    name: 'High force grid design day group',
+    link: 'http://github.com/',
   },
-  {
-    id: 'trend-6',
-    updatedAt: new Date(),
-    user: {
-      name: '乐哥',
-      avatar: avatars2[5],
-    },
-    group: {
-      name: '程序员日常',
-      link: 'http://github.com/',
-    },
-    project: {
-      name: '品牌迭代',
-      link: 'http://github.com/',
-    },
-    template: '在 @{group} 新建项目 @{project}',
+  project: {
+    name: 'June iteration',
+    link: 'http://github.com/',
   },
+  template: 'New project @{group} @{project}',
+},
+{
+  id: 'trend-3',
+  updatedAt: new Date(),
+  user: {
+    name: 'Lin Dongdong',
+    avatar: avatars2[2],
+  },
+  group: {
+    name: 'second girls',
+    link: 'http://github.com/',
+  },
+  project: {
+    name: 'June iteration',
+    link: 'http://github.com/',
+  },
+  template: 'New project @{group} @{project}',
+},
+{
+  id: 'trend-4',
+  updatedAt: new Date(),
+  user: {
+    name: 'Star stars',
+    avatar: avatars2[4],
+  },
+  project: {
+    name: 'May daily iteration',
+    link: 'http://github.com/',
+  },
+  template: 'Update @{project} to Published Status',
+},
+{
+  id: 'trend-5',
+  updatedAt: new Date(),
+  user: {
+    name: 'Zhu partial right',
+    avatar: avatars2[3],
+  },
+  project: {
+    name: 'Engineering Effectiveness',
+    link: 'http://github.com/',
+  },
+  comment: {
+    name: 'message',
+    link: 'http://github.com/',
+  },
+  template: '@{comment} was posted at @{project}',
+},
+{
+  id: 'trend-6',
+  updatedAt: new Date(),
+  user: {
+    name: 'Lok,',
+    avatar: avatars2[5],
+  },
+  group: {
+    name: 'programmer daily',
+    link: 'http://github.com/',
+  },
+  project: {
+    name: 'brand iteration',
+    link: 'http://github.com/',
+  },
+  template: 'New project @{group} @{project}',
+},
 ];
-
 
 export default {
   getNotice,

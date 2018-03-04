@@ -38,45 +38,45 @@ export default class Monitor extends PureComponent {
       <Fragment>
         <Row gutter={24}>
           <Col xl={18} lg={24} md={24} sm={24} xs={24} style={{ marginBottom: 24 }}>
-            <Card title="活动实时交易情况" bordered={false}>
+            <Card title="Activities real-time transactions" bordered={false}>
               <Row>
                 <Col md={6} sm={12} xs={24}>
                   <NumberInfo
-                    subTitle="今日交易总额"
-                    suffix="元"
+                    subTitle="Today's total turnover"
+                    suffix="$"
                     total={numeral(124543233).format('0,0')}
                   />
                 </Col>
                 <Col md={6} sm={12} xs={24}>
                   <NumberInfo
-                    subTitle="销售目标完成率"
+                    subTitle="Sales target completion rate"
                     total="92%"
                   />
                 </Col>
                 <Col md={6} sm={12} xs={24}>
-                  <NumberInfo subTitle="活动剩余时间" total={<CountDown target={targetTime} />} />
+                  <NumberInfo subTitle="Remaining time" total={<CountDown target={targetTime} />} />
                 </Col>
                 <Col md={6} sm={12} xs={24}>
                   <NumberInfo
-                    subTitle="每秒交易总额"
-                    suffix="元"
+                    subTitle="Total transactions per second"
+                    suffix="$"
                     total={numeral(234).format('0,0')}
                   />
                 </Col>
               </Row>
               <div className={styles.mapChart}>
-                <Tooltip title="等待后期实现">
+                <Tooltip title="Waiting for later realization">
                   <img src="https://gw.alipayobjects.com/zos/rmsportal/HBWnDEUXCnGnGrRfrpKa.png" alt="map" />
                 </Tooltip>
               </div>
             </Card>
           </Col>
           <Col xl={6} lg={24} md={24} sm={24} xs={24}>
-            <Card title="活动情况预测" style={{ marginBottom: 24 }} bordered={false}>
+            <Card title="Activity forecast" style={{ marginBottom: 24 }} bordered={false}>
               <ActiveChart />
             </Card>
             <Card
-              title="券核效率"
+              title="Vouchers nuclear efficiency"
               style={{ marginBottom: 24 }}
               bodyStyle={{ textAlign: 'center' }}
               bordered={false}
@@ -85,18 +85,18 @@ export default class Monitor extends PureComponent {
                 format={(val) => {
                   switch (parseInt(val, 10)) {
                     case 20:
-                      return '差';
+                      return 'difference';
                     case 40:
-                      return '中';
+                      return 'in';
                     case 60:
-                      return '良';
+                      return 'good';
                     case 80:
-                      return '优';
+                      return 'excellent';
                     default:
                       return '';
                   }
                 }}
-                title="跳出率"
+                title="Bounce Rate"
                 height={180}
                 percent={87}
               />
@@ -106,7 +106,7 @@ export default class Monitor extends PureComponent {
         <Row gutter={24}>
           <Col xl={12} lg={24} sm={24} xs={24}>
             <Card
-              title="各品类占比"
+              title="Each category accounted for"
               bordered={false}
               className={styles.pieCard}
             >
@@ -115,7 +115,7 @@ export default class Monitor extends PureComponent {
                   <Pie
                     animate={false}
                     percent={28}
-                    subTitle="中式快餐"
+                    subTitle="Chinese fast food"
                     total="28%"
                     height={128}
                     lineWidth={2}
@@ -126,7 +126,7 @@ export default class Monitor extends PureComponent {
                     animate={false}
                     color="#5DDECF"
                     percent={22}
-                    subTitle="西餐"
+                    subTitle="Western food"
                     total="22%"
                     height={128}
                     lineWidth={2}
@@ -137,7 +137,7 @@ export default class Monitor extends PureComponent {
                     animate={false}
                     color="#2FC25B"
                     percent={32}
-                    subTitle="火锅"
+                    subTitle="Hot Pot"
                     total="32%"
                     height={128}
                     lineWidth={2}
@@ -147,7 +147,7 @@ export default class Monitor extends PureComponent {
             </Card>
           </Col>
           <Col xl={6} lg={12} sm={24} xs={24}>
-            <Card title="热门搜索" loading={loading} bordered={false} bodyStyle={{ overflow: 'hidden' }}>
+            <Card title="Popular searches" loading={loading} bordered={false} bodyStyle={{ overflow: 'hidden' }}>
               <TagCloud
                 data={tags}
                 height={161}
@@ -155,10 +155,10 @@ export default class Monitor extends PureComponent {
             </Card>
           </Col>
           <Col xl={6} lg={12} sm={24} xs={24}>
-            <Card title="资源剩余" bodyStyle={{ textAlign: 'center', fontSize: 0 }} bordered={false}>
+            <Card title="Resource surplus" bodyStyle={{ textAlign: 'center', fontSize: 0 }} bordered={false}>
               <WaterWave
                 height={161}
-                title="补贴资金剩余"
+                title="Subsidy remaining"
                 percent={34}
               />
             </Card>

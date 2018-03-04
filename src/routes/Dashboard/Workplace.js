@@ -12,27 +12,27 @@ import styles from './Workplace.less';
 
 const links = [
   {
-    title: '操作一',
+    title: 'operation one',
     href: '',
   },
   {
-    title: '操作二',
+    title: 'operation two',
     href: '',
   },
   {
-    title: '操作三',
+    title: 'Operation Three',
     href: '',
   },
   {
-    title: '操作四',
+    title: 'operation four',
     href: '',
   },
   {
-    title: '操作五',
+    title: 'operation five',
     href: '',
   },
   {
-    title: '操作六',
+    title: 'operation six',
     href: '',
   },
 ];
@@ -40,31 +40,31 @@ const links = [
 const members = [
   {
     id: 'members-1',
-    title: '科学搬砖组',
+    title: 'Scientist',
     logo: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
     link: '',
   },
   {
     id: 'members-2',
-    title: '程序员日常',
+    title: 'Programmer',
     logo: 'https://gw.alipayobjects.com/zos/rmsportal/cnrhVkzwxjPwAaCfPbdc.png',
     link: '',
   },
   {
     id: 'members-3',
-    title: '设计天团',
+    title: 'Designer',
     logo: 'https://gw.alipayobjects.com/zos/rmsportal/gaOngJwsRYRaVAuXXcmB.png',
     link: '',
   },
   {
     id: 'members-4',
-    title: '中二少女团',
+    title: 'Missionist',
     logo: 'https://gw.alipayobjects.com/zos/rmsportal/ubnKSIfAJTxIgXOKlciN.png',
     link: '',
   },
   {
     id: 'members-5',
-    title: '骗你学计算机',
+    title: 'Student',
     logo: 'https://gw.alipayobjects.com/zos/rmsportal/WhxKECPNujWoWEFNdnJE.png',
     link: '',
   },
@@ -145,8 +145,8 @@ export default class Workplace extends PureComponent {
           <Avatar size="large" src="https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png" />
         </div>
         <div className={styles.content}>
-          <div className={styles.contentTitle}>早安，曲丽丽，祝你开心每一天！</div>
-          <div>交互专家 | 蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED</div>
+          <div className={styles.contentTitle}>Good morning, Ziluli,</div>
+          <div>Interactive experts | ant gold clothes - a certain technical department-UED</div>
         </div>
       </div>
     );
@@ -154,16 +154,16 @@ export default class Workplace extends PureComponent {
     const extraContent = (
       <div className={styles.extraContent}>
         <div className={styles.statItem}>
-          <p>项目数</p>
-          <p>56</p>
+          <p> Number of items </p>
+          <p> 56 </p>
         </div>
         <div className={styles.statItem}>
-          <p>团队内排名</p>
-          <p>8<span> / 24</span></p>
+          <p> Team Ranking </p>
+          <p> 8 <span> / 24 </span> </p>
         </div>
         <div className={styles.statItem}>
-          <p>项目访问</p>
-          <p>2,223</p>
+          <p> Project Visits </p>
+          <p> 2,223 </p>
         </div>
       </div>
     );
@@ -178,9 +178,9 @@ export default class Workplace extends PureComponent {
             <Card
               className={styles.projectList}
               style={{ marginBottom: 24 }}
-              title="进行中的项目"
+              title="Projects in progress"
               bordered={false}
-              extra={<Link to="/">全部项目</Link>}
+              extra={<Link to="/"> All Items </Link>}
               loading={projectLoading}
               bodyStyle={{ padding: 0 }}
             >
@@ -214,7 +214,7 @@ export default class Workplace extends PureComponent {
               bodyStyle={{ padding: 0 }}
               bordered={false}
               className={styles.activeCard}
-              title="动态"
+              title="Dynamic"
               loading={activitiesLoading}
             >
               <List loading={activitiesLoading} size="large">
@@ -227,8 +227,8 @@ export default class Workplace extends PureComponent {
           <Col xl={8} lg={24} md={24} sm={24} xs={24}>
             <Card
               style={{ marginBottom: 24 }}
-              title="快速开始 / 便捷导航"
-              bordered={false}
+              title="Quick start / Easy navigation"
+              bordered
               bodyStyle={{ padding: 0 }}
             >
               <EditableLinkGroup
@@ -240,7 +240,7 @@ export default class Workplace extends PureComponent {
             <Card
               style={{ marginBottom: 24 }}
               bordered={false}
-              title="XX 指数"
+              title="XX Index"
               loading={radarData.length === 0}
             >
               <div className={styles.chart}>
@@ -250,7 +250,7 @@ export default class Workplace extends PureComponent {
             <Card
               bodyStyle={{ paddingTop: 12, paddingBottom: 12 }}
               bordered={false}
-              title="团队"
+              title="Team"
             >
               <div className={styles.members}>
                 <Row gutter={48}>
