@@ -51,7 +51,7 @@ export default class BasicForms extends PureComponent {
     };
 
     return (
-      <PageHeaderLayout title="基础表单" content="表单页用于向用户收集或验证信息，基础表单常见于数据项较少的表单场景。">
+      <PageHeaderLayout title="Basic form" content="Form pages are used to collect or verify information from users. Basic forms are common to form scenes with fewer data items.">
         <Card bordered={false}>
           <Form
             onSubmit={this.handleSubmit}
@@ -60,23 +60,23 @@ export default class BasicForms extends PureComponent {
           >
             <FormItem
               {...formItemLayout}
-              label="标题"
+              label="Title"
             >
               {getFieldDecorator('title', {
                 rules: [{
-                  required: true, message: '请输入标题',
+                  required: true, message: 'Please enter the title',
                 }],
               })(
-                <Input placeholder="给目标起个名字" />
+                <Input placeholder="Give the target a name" />
               )}
             </FormItem>
             <FormItem
               {...formItemLayout}
-              label="起止日期"
+              label="Starting and ending dates"
             >
               {getFieldDecorator('date', {
                 rules: [{
-                  required: true, message: '请选择起止日期',
+                  required: true, message: 'Please select the starting and ending date',
                 }],
               })(
                 <RangePicker style={{ width: '100%' }} placeholder={['Start date', 'End date']} />
@@ -84,36 +84,36 @@ export default class BasicForms extends PureComponent {
             </FormItem>
             <FormItem
               {...formItemLayout}
-              label="目标描述"
+              label="Target Description"
             >
               {getFieldDecorator('goal', {
                 rules: [{
-                  required: true, message: '请输入目标描述',
+                  required: true, message: 'Please enter a description of the target',
                 }],
               })(
-                <TextArea style={{ minHeight: 32 }} placeholder="请输入你的阶段性工作目标" rows={4} />
+                <TextArea style={{ minHeight: 32 }} placeholder="Please enter your stage work goals" rows={4} />
               )}
             </FormItem>
             <FormItem
               {...formItemLayout}
-              label="衡量标准"
+              label="Metrics"
             >
               {getFieldDecorator('standard', {
                 rules: [{
-                  required: true, message: '请输入衡量标准',
+                  required: true, message: 'Please enter a measure',
                 }],
               })(
-                <TextArea style={{ minHeight: 32 }} placeholder="请输入衡量标准" rows={4} />
+                <TextArea style={{ minHeight: 32 }} placeholder="Please enter a measure" rows={4} />
               )}
             </FormItem>
             <FormItem
               {...formItemLayout}
               label={
                 <span>
-                  客户
+                   Client
                   <em className={styles.optional}>
-                    （选填）
-                    <Tooltip title="目标的服务对象">
+                     (Optional)
+                    <Tooltip title="Targeted Service Object">
                       <Icon type="info-circle-o" style={{ marginRight: 4 }} />
                     </Tooltip>
                   </em>
@@ -121,54 +121,57 @@ export default class BasicForms extends PureComponent {
               }
             >
               {getFieldDecorator('client')(
-                <Input placeholder="请描述你服务的客户，内部客户直接 @姓名／工号" />
+                <Input placeholder="Please describe your customer service, internal customers directly @name/job number" />
               )}
             </FormItem>
             <FormItem
               {...formItemLayout}
-              label={<span>邀评人<em className={styles.optional}>（选填）</em></span>}
+              label={
+                <span>
+                      Invite commentators<em className={styles.optional}>(Optional)</em>
+                </span>}
             >
               {getFieldDecorator('invites')(
-                <Input placeholder="请直接 @姓名／工号，最多可邀请 5 人" />
+                <Input placeholder="Please direct @name/job number, up to 5 people can be invited" />
               )}
             </FormItem>
             <FormItem
               {...formItemLayout}
-              label={<span>权重<em className={styles.optional}>（选填）</em></span>}
+              label={<span>Weights<em className={styles.optional}>(Optional)</em></span>}
             >
               {getFieldDecorator('weight')(
-                <InputNumber placeholder="请输入" min={0} max={100} />
+                <InputNumber placeholder="Please enter" min={0} max={100} />
               )}
               <span>%</span>
             </FormItem>
             <FormItem
               {...formItemLayout}
-              label="目标公开"
-              help="客户、邀评人默认被分享"
+              label="target public"
+              help="customers, invited commentators are shared by default"
             >
               <div>
                 {getFieldDecorator('public', {
                   initialValue: '1',
                 })(
                   <Radio.Group>
-                    <Radio value="1">公开</Radio>
-                    <Radio value="2">部分公开</Radio>
-                    <Radio value="3">不公开</Radio>
+                    <Radio value="1"> Public </Radio>
+                    <Radio value="2"> Partially public </Radio>
+                    <Radio value="3"> Not public </Radio>
                   </Radio.Group>
                 )}
                 <FormItem style={{ marginBottom: 0 }}>
                   {getFieldDecorator('publicUsers')(
                     <Select
                       mode="multiple"
-                      placeholder="公开给"
+                      placeholder="Open to"
                       style={{
                         margin: '8px 0',
                         display: getFieldValue('public') === '2' ? 'block' : 'none',
                       }}
                     >
-                      <Option value="1">同事甲</Option>
-                      <Option value="2">同事乙</Option>
-                      <Option value="3">同事丙</Option>
+                      <Option value="1"> Colleague A </Option>
+                      <Option value="2"> Colleague B </Option>
+                      <Option value="3"> Colleague C </Option>
                     </Select>
                   )}
                 </FormItem>
@@ -176,9 +179,9 @@ export default class BasicForms extends PureComponent {
             </FormItem>
             <FormItem {...submitFormLayout} style={{ marginTop: 32 }}>
               <Button type="primary" htmlType="submit" loading={submitting}>
-                提交
+                Submit
               </Button>
-              <Button style={{ marginLeft: 8 }}>保存</Button>
+              <Button style={{ marginLeft: 8 }}>Save</Button>
             </FormItem>
           </Form>
         </Card>

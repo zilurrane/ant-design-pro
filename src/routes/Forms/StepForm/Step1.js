@@ -36,11 +36,11 @@ class Step1 extends React.PureComponent {
         <Form layout="horizontal" className={styles.stepForm} hideRequiredMark>
           <Form.Item
             {...formItemLayout}
-            label="付款账户"
+            label="Payment"
           >
             {getFieldDecorator('payAccount', {
               initialValue: data.payAccount,
-              rules: [{ required: true, message: '请选择付款账户' }],
+              rules: [{ required: true, message: 'Please select a payment account' }],
             })(
               <Select placeholder="test@example.com">
                 <Option value="ant-design@alipay.com">ant-design@alipay.com</Option>
@@ -49,18 +49,18 @@ class Step1 extends React.PureComponent {
           </Form.Item>
           <Form.Item
             {...formItemLayout}
-            label="收款账户"
+            label="Account"
           >
             <Input.Group compact>
               <Select defaultValue="alipay" style={{ width: 100 }}>
-                <Option value="alipay">支付宝</Option>
-                <Option value="bank">银行账户</Option>
+                <Option value="alipay">Alipay</Option>
+                <Option value="bank">Bank Account</Option>
               </Select>
               {getFieldDecorator('receiverAccount', {
                 initialValue: data.receiverAccount,
                 rules: [
-                  { required: true, message: '请输入收款人账户' },
-                  { type: 'email', message: '账户名应为邮箱格式' },
+                  { required: true, message: 'Please enter payee account' },
+                  { type: 'email', message: 'Account name should be in email format' },
                 ],
               })(
                 <Input style={{ width: 'calc(100% - 100px)' }} placeholder="test@example.com" />
@@ -69,27 +69,27 @@ class Step1 extends React.PureComponent {
           </Form.Item>
           <Form.Item
             {...formItemLayout}
-            label="收款人姓名"
+            label="Payee Name"
           >
             {getFieldDecorator('receiverName', {
               initialValue: data.receiverName,
-              rules: [{ required: true, message: '请输入收款人姓名' }],
+              rules: [{ required: true, message: 'Please enter the payee name' }],
             })(
-              <Input placeholder="请输入收款人姓名" />
+              <Input placeholder="Please enter the payee name" />
             )}
           </Form.Item>
           <Form.Item
             {...formItemLayout}
-            label="转账金额"
+            label="Transfer amount"
           >
             {getFieldDecorator('amount', {
               initialValue: data.amount,
               rules: [
-                { required: true, message: '请输入转账金额' },
-                { pattern: /^(\d+)((?:\.\d+)?)$/, message: '请输入合法金额数字' },
+                { required: true, message: 'Please enter the transfer amount' },
+                { pattern: /^(\d+)((?:\.\d+)?)$/, message: 'Please enter the valid amount in figures' },
               ],
             })(
-              <Input prefix="￥" placeholder="请输入金额" />
+              <Input prefix="$" placeholder="Please enter the amount" />
             )}
           </Form.Item>
           <Form.Item
@@ -100,17 +100,25 @@ class Step1 extends React.PureComponent {
             label=""
           >
             <Button type="primary" onClick={onValidateForm}>
-              下一步
+            Next step
             </Button>
           </Form.Item>
         </Form>
         <Divider style={{ margin: '40px 0 24px' }} />
         <div className={styles.desc}>
-          <h3>说明</h3>
-          <h4>转账到支付宝账户</h4>
-          <p>如果需要，这里可以放一些关于产品的常见问题说明。如果需要，这里可以放一些关于产品的常见问题说明。如果需要，这里可以放一些关于产品的常见问题说明。</p>
-          <h4>转账到银行卡</h4>
-          <p>如果需要，这里可以放一些关于产品的常见问题说明。如果需要，这里可以放一些关于产品的常见问题说明。如果需要，这里可以放一些关于产品的常见问题说明。</p>
+          <h3> Description </h3>
+          <h4> Transfer to Alipay Account </h4>
+          <p>
+            Here you can put some FAQs about the product if needed.
+            If necessary, here can be put on some common product descriptions.
+            If necessary, here can be put on some common product descriptions.
+          </p>
+          <h4> Transfer to Bank Card </h4>
+          <p>
+            Here you can put some FAQs about the product if needed.
+            If necessary, here can be put on some common product descriptions.
+            If necessary, here can be put on some common product descriptions.
+          </p>
         </div>
       </Fragment>
     );
