@@ -7,7 +7,7 @@ import styles from './RegisterResult.less';
 const actions = (
   <div className={styles.actions}>
     <a href=""><Button size="large" type="primary">查看邮箱</Button></a>
-    <Link to="/"><Button size="large">返回首页</Button></Link>
+    <Link to="/"><Button size="large">返回LC Ant React</Button></Link>
   </div>
 );
 

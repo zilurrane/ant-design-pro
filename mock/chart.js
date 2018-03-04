@@ -24,7 +24,7 @@ for (let i = 0; i < fakeY2.length; i += 1) {
 const salesData = [];
 for (let i = 0; i < 12; i += 1) {
   salesData.push({
-    x: `${i + 1}月`,
+    x: `${i + 1}`,
     y: Math.floor(Math.random() * 1000) + 200,
   });
 }
@@ -32,93 +32,90 @@ const searchData = [];
 for (let i = 0; i < 50; i += 1) {
   searchData.push({
     index: i + 1,
-    keyword: `搜索关键词-${i}`,
+    keyword: `Search keyword-${i}`,
     count: Math.floor(Math.random() * 1000),
     range: Math.floor(Math.random() * 100),
     status: Math.floor((Math.random() * 10) % 2),
   });
 }
-const salesTypeData = [
-  {
-    x: '家用电器',
-    y: 4544,
-  },
-  {
-    x: '食用酒水',
-    y: 3321,
-  },
-  {
-    x: '个护健康',
-    y: 3113,
-  },
-  {
-    x: '服饰箱包',
-    y: 2341,
-  },
-  {
-    x: '母婴产品',
-    y: 1231,
-  },
-  {
-    x: '其他',
-    y: 1231,
-  },
+const salesTypeData = [{
+  x: 'Households',
+  y: 4544,
+},
+{
+  x: 'Food drink',
+  y: 3321,
+},
+{
+  x: 'Health care',
+  y: 3113,
+},
+{
+  x: 'Clothing bags',
+  y: 2341,
+},
+{
+  x: 'Baby products',
+  y: 1231,
+},
+{
+  x: 'Other',
+  y: 1231,
+},
 ];
 
-const salesTypeDataOnline = [
-  {
-    x: '家用电器',
-    y: 244,
-  },
-  {
-    x: '食用酒水',
-    y: 321,
-  },
-  {
-    x: '个护健康',
-    y: 311,
-  },
-  {
-    x: '服饰箱包',
-    y: 41,
-  },
-  {
-    x: '母婴产品',
-    y: 121,
-  },
-  {
-    x: '其他',
-    y: 111,
-  },
+const salesTypeDataOnline = [{
+  x: 'Households',
+  y: 244,
+},
+{
+  x: 'Food Drink',
+  y: 321,
+},
+{
+  x: 'health care',
+  y: 311,
+},
+{
+  x: 'Fashion Bags',
+  y: 41,
+},
+{
+  x: 'Baby Products',
+  y: 121,
+},
+{
+  x: 'Other',
+  y: 111,
+},
 ];
 
-const salesTypeDataOffline = [
-  {
-    x: '家用电器',
-    y: 99,
-  },
-  {
-    x: '个护健康',
-    y: 188,
-  },
-  {
-    x: '服饰箱包',
-    y: 344,
-  },
-  {
-    x: '母婴产品',
-    y: 255,
-  },
-  {
-    x: '其他',
-    y: 65,
-  },
+const salesTypeDataOffline = [{
+  x: 'Households',
+  y: 99,
+},
+{
+  x: 'Health care',
+  y: 188,
+},
+{
+  x: 'Fashion Bags',
+  y: 344,
+},
+{
+  x: 'Baby Products',
+  y: 255,
+},
+{
+  x: 'Other',
+  y: 65,
+},
 ];
 
 const offlineData = [];
 for (let i = 0; i < 10; i += 1) {
   offlineData.push({
-    name: `门店${i}`,
+    name: `Store${i}`,
     cvr: Math.ceil(Math.random() * 9) / 10,
   });
 }
@@ -131,42 +128,42 @@ for (let i = 0; i < 20; i += 1) {
   });
 }
 
-const radarOriginData = [
-  {
-    name: '个人',
-    ref: 10,
-    koubei: 8,
-    output: 4,
-    contribute: 5,
-    hot: 7,
-  },
-  {
-    name: '团队',
-    ref: 3,
-    koubei: 9,
-    output: 6,
-    contribute: 3,
-    hot: 1,
-  },
-  {
-    name: '部门',
-    ref: 4,
-    koubei: 1,
-    output: 6,
-    contribute: 5,
-    hot: 7,
-  },
+const radarOriginData = [{
+  name: 'Personal',
+  ref: 10,
+  koubei: 8,
+  output: 4,
+  contribute: 5,
+  hot: 7,
+},
+{
+  name: 'Team',
+  ref: 3,
+  koubei: 9,
+  output: 6,
+  contribute: 3,
+  hot: 1,
+},
+{
+  name: 'Department',
+  ref: 4,
+  koubei: 1,
+  output: 6,
+  contribute: 5,
+  hot: 7,
+},
 ];
 
 //
 const radarData = [];
 const radarTitleMap = {
-  ref: '引用',
-  koubei: '口碑',
-  output: '产量',
-  contribute: '贡献',
-  hot: '热度',
+  ref: 'Reference',
+  koubei: 'Word of mouth',
+  output: 'Production',
+  contribute: 'Contribution',
+  hot: 'Hot',
 };
+
 radarOriginData.forEach((item) => {
   Object.keys(item).forEach((key) => {
     if (key !== 'name') {
