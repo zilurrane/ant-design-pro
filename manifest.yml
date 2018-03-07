@@ -1,0 +1,6 @@
+---
+applications:
+- name: lc-ant-react
+  memory: 512M
+  instances: 1
+random-route: true
