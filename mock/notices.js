@@ -4,7 +4,7 @@ export const getNotices = (req, res) => {
     avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
     title: 'You received 14 new weekly reports',
     datetime: '2017-08-09',
-    type: 'Notice',
+    type: 'notice',
   },
   {
     id: '000000002',
@@ -65,7 +65,7 @@ export const getNotices = (req, res) => {
     description: 'Tasks need to be started before 2017-01-12 20:00',
     extra: 'not started',
     status: 'todo',
-    type: 'to be done',
+    type: 'todo',
   },
   {
     id: '000000010',
@@ -73,7 +73,7 @@ export const getNotices = (req, res) => {
     description: 'Guan Lin submitted on 2017-01-06, need to be completed before 2017-01-07 code change task',
     extra: 'Expiring soon',
     status: 'urgent',
-    type: 'to be done',
+    type: 'todo',
   },
   {
     id: '000000011',
@@ -81,7 +81,7 @@ export const getNotices = (req, res) => {
     description: 'Assign Churl to be updated and released by 2017-01-09',
     extra: 'It took eight days',
     status: 'doing',
-    type: 'to be done',
+    type: 'todo',
   },
   {
     id: '000000012',
@@ -89,7 +89,7 @@ export const getNotices = (req, res) => {
     description: 'Guan Lin submitted on 2017-01-06, need to be completed before 2017-01-07 code change task',
     extra: 'in progress',
     status: 'processing',
-    type: 'to be done',
+    type: 'todo',
   },
   ]);
 };
