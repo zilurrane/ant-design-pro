@@ -47,16 +47,16 @@ export default class TriggerException extends PureComponent {
       <Card>
         <Spin spinning={this.state.isloading} wrapperClassName={styles.trigger}>
           <Button type="danger" onClick={this.trigger401}>
-            触发401
+          Trigger 401
           </Button>
           <Button type="danger" onClick={this.trigger403}>
-            触发403
+          Trigger 403
           </Button>
           <Button type="danger" onClick={this.trigger500}>
-            触发500
+          Trigger 500
           </Button>
           <Button type="danger" onClick={this.trigger404}>
-            触发404
+          Trigger 404
           </Button>
         </Spin>
       </Card>
