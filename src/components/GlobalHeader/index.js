@@ -65,7 +65,6 @@ export default class GlobalHeader extends PureComponent {
       </Menu>
     );
     const noticeData = this.getNoticeData();
-    console.log(noticeData);
     return (
       <div className={styles.header}>
         {isMobile && (
