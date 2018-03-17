@@ -12,7 +12,6 @@
     "start": "cross-env ESLINT=none roadhog dev",
     "start:no-proxy": "cross-env NO_PROXY=true ESLINT=none roadhog dev",
     "build": "cross-env ESLINT=none roadhog build",
-    "site": "roadhog-api-doc static && gh-pages -d dist",
     "analyze": "cross-env ANALYZE=true roadhog build",
     "lint:style": "stylelint \"src/**/*.less\" --syntax less",
     "lint": "eslint --ext .js src mock tests && npm run lint:style",
